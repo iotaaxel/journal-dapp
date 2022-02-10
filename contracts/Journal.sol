@@ -24,12 +24,13 @@ contract Journal {
     function createJournalEntry(string memory _note, string memory _title, Mood _mood) public {
         // Require valid entry items
         require(bytes(_note).length > 0 && bytes(_title).length > 0);
-        // Increase entry count
-        entryCount++;
+    
         // Create a journal entry
         entries[entryCount] = Entry(_title, _note, msg.sender, _mood);
         // Trigger event
         emit Submitted(_title, _note, msg.sender, _mood);
+        // Increase entry count
+        entryCount++;
     }
 
 }
