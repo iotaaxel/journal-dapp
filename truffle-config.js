@@ -26,7 +26,7 @@ const path = require('path');
 
 module.exports = {
   // Bring contacts from build folder to src eince default behavior disallows importing files outside of src
-  contacts_build_directory: path.join(__dirname, "journal-dapp/src/contracts")
+  contacts_build_directory: path.join(__dirname, "client/src/contracts")
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
