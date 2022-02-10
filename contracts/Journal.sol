@@ -33,4 +33,7 @@ contract Journal {
         entryCount++;
     }
 
+    function getTitle() public view returns (string memory) {
+        return (title);
+    }
 }
